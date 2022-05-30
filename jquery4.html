@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div animation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+        
+            $('#start').click(function(){
+                $('#box').animate({  
+                    height: "300px",
+                    width: "350px",
+                    opacity : '0.5', 
+                },2000);
+                $('#box').animate({  
+                    left : "518px" 
+                },2000);
+                $('#box').animate({  
+                    fontSize :"60px",  
+                },2000);
+            });
+            
+            $("#hidetog").click(function(){
+                $("#box").toggle();
+            });
+        
+            $("#fade").click(function(){
+                $("#box").fadeOut();
+            });
+           
+            $("#slidetog").click(function(){
+                $("#box").slideToggle(2000);
+            });
+          
+            $("#stop").click(function(){
+                $("#box").stop();
+            });
+        
+        
+        
+        
+        });
+        
+        </script>
+    <style>
+        #main{
+            height: 500px;
+            width: 700px;
+            /* border: 1px solid rebeccapurple; */
+            margin: 0 auto;
+        }
+        #box {
+            background-color: green;
+            height: 100px;
+            width: 200px;
+            color: white;
+            margin-top: 20px;
+            position: absolute;
+        }
+        button{
+            padding: 10px;
+            margin: -2px;
+            width: 136px;
+            border: none;
+            
+        }
+        h2{
+            margin: 0px;
+        }
+        #btn{
+            width: 100%;
+        }
+        #start{
+            background-color: rgb(61, 61, 231);
+            color: white;
+        }
+        #hidetog{
+            background-color: rgb(61, 196, 56);
+            color: white;
+        }
+        #fade{
+            background-color: rgb(240, 224, 11);
+            color: black;
+        }
+        #slidetog{
+            background-color: rgb(10, 136, 153);
+            color: rgb(255, 255, 255);
+        }
+        #stop{
+            background-color: rgb(243, 33, 33);
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="btn">
+            <button id="start">Start Animation</button>
+            <button id="hidetog">Hide/Show</button>
+            <button id="fade">Fade</button>
+            <button id="slidetog">Slide Up/DOwn</button>
+            <button id="stop">Stop</button>
+
+        </div>
+       
+
+
+        <div id="box">
+            <h2>Hello</h2>
+        </div>
+
+    </div>
+</body>
+</html>

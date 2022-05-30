@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Question</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn-1").click(function () {
+                $("p").animate({
+                    height: "100px",
+                    width: "100px",
+                    
+                }, 1500);
+                $("p").animate({
+                    left: "+=50px"
+                }, 1500);
+                $("p").animate({
+                    fontSize: "3em"
+                }, 1500);
+            });
+            $(".btn-2").click(function () {
+                $(".box").toggle();
+            });
+            $(".btn-3").click(function () {
+                $(".box").fadeTo("slow",0.2);
+            });
+            $(".btn-4").click(function () {
+                $(".box").slideToggle(2000);
+            });
+        });
+    </script>
+    <style>
+
+        #s1 {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button type="button" class="btn btn-1">Start Animation</button>
+    <button type="button" class="btn btn-2">Hide/Show</button>
+    <button type="button" class="btn btn-3">Fade</button>
+    <button type="button" class="btn btn-4">SlideUp/SlideDown</button>
+
+    <p>Happy Birthday Sam</p>
+</body>
+
+</html>
